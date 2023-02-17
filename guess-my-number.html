@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number</title>
+    <style>
+      * {
+        margin: 0%;
+      }
+      body {
+        background-color: black;
+      }
+      .header-container {
+        color: white;
+        display: flex;
+        width: 90%;
+        align-items: center;
+        margin: 40px auto;
+        justify-content: space-between;
+      }
+
+      .header-container button {
+        padding: 13px 25px;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: aqua;
+        font-family: cursive;
+        border: none;
+        cursor: pointer;
+      }
+
+      .header-container p {
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: cursive;
+        color: aqua;
+      }
+
+      .header-heading h1 {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .hidden-number-mark {
+        font-size: 3rem;
+        font-family: cursive;
+        font-weight: bold;
+        color: black;
+        background-color: white;
+        padding: 10px 30px;
+      }
+
+      .hidden-number-box {
+        text-align: center;
+      }
+      .line {
+        height: 5px;
+        margin-bottom: -38px;
+        width: 100%;
+        display: inline-block;
+        background-color: white;
+      }
+      .hidden-number-container {
+        margin-top: 20px;
+      }
+      .guess-number-container {
+        display: flex;
+        width: 90%;
+        margin: 40px auto 0px auto;
+        justify-content: space-between;
+      }
+      .guess-number-box {
+        width: 40%;
+        text-align: center;
+      }
+      .guess-number-box input {
+        font-size: 2rem;
+        width: 40%;
+        padding: 10px 0px 10px 5px;
+        margin: 20px 0px;
+        outline: none;
+        color: white;
+        font-weight: bold;
+        font-family: cursive;
+        background-color: black;
+        border: 2px solid white;
+      }
+      .guess-number-box button {
+        padding: 13px 25px;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: aqua;
+        font-family: cursive;
+        border: none;
+        cursor: pointer;
+      }
+      .information-about-your-guess {
+        width: 40%;
+      }
+      .information-about-your-guess p {
+        color: white;
+        font-family: cursive;
+        font-size: 1.5rem;
+        line-height: 3rem;
+        font-weight: bold;
+      }
+
+      @media screen and (max-width: 670px) {
+        .information-about-your-guess p {
+          font-size: 1.2rem;
+        }
+
+        .guess-number-box {
+          width: 40%;
+        }
+
+        .guess-number-box input {
+          font-size: 1.5rem;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .header-heading h1 {
+          font-size: 2.4rem;
+        }
+        .guess-number-container {
+          width: 98%;
+        }
+      }
+
+      @media screen and (max-width: 420px) {
+        .header-heading h1 {
+          font-size: 2rem;
+          font-family: cursive;
+        }
+
+        .information-about-your-guess p {
+          font-size: 1rem;
+        }
+        .guess-number-container {
+          margin: 70px auto 0px auto;
+        }
+        .guess-number-box input {
+          font-size: 1.2rem;
+        }
+        .hidden-number-container {
+          margin-top: 45px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <button type="submit">Again!</button>
+        <p>&lt;Between 1 and 20&gt;</p>
+      </div>
+      <div class="header-heading">
+        <h1>Guess My Number!</h1>
+      </div>
+    </header>
+    <main>
+      <section class="hidden-number-container">
+        <div class="hidden-number-box">
+          <span class="line"></span>
+          <span class="hidden-number-mark"> ? </span>
+        </div>
+      </section>
+
+      <section class="guess-number-container">
+        <div class="guess-number-box">
+          <input type="number" name="number" id="guessed-number" />
+          <br />
+          <button type="submit">Check!</button>
+        </div>
+        <div class="information-about-your-guess">
+          <p>Start Guessing...</p>
+          <p>💯 Score: 20</p>
+          <p>🥇 Highscore: 0</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
