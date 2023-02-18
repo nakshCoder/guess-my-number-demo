@@ -10,7 +10,7 @@
         margin: 0%;
       }
       body {
-        background-color: black;
+        background-color: #222;
       }
       .header-container {
         color: white;
@@ -26,7 +26,7 @@
         font-size: 1rem;
         font-weight: bold;
         background-color: aqua;
-        font-family: cursive;
+        font-family: sans-serif;
         border: none;
         cursor: pointer;
       }
@@ -34,7 +34,7 @@
       .header-container p {
         font-size: 1rem;
         font-weight: bold;
-        font-family: cursive;
+        font-family: sans-serif;
         color: aqua;
       }
 
@@ -47,7 +47,7 @@
 
       .hidden-number-mark {
         font-size: 3rem;
-        font-family: cursive;
+        font-family: sans-serif;
         font-weight: bold;
         color: black;
         background-color: white;
@@ -85,8 +85,8 @@
         outline: none;
         color: white;
         font-weight: bold;
-        font-family: cursive;
-        background-color: black;
+        font-family: sans-serif;
+        background-color: #222;
         border: 2px solid white;
       }
       .guess-number-box button {
@@ -94,7 +94,7 @@
         font-size: 1rem;
         font-weight: bold;
         background-color: aqua;
-        font-family: cursive;
+        font-family: sans-serif;
         border: none;
         cursor: pointer;
       }
@@ -103,7 +103,7 @@
       }
       .information-about-your-guess p {
         color: white;
-        font-family: cursive;
+        font-family: sans-serif;
         font-size: 1.5rem;
         line-height: 3rem;
         font-weight: bold;
@@ -134,7 +134,7 @@
       @media screen and (max-width: 420px) {
         .header-heading h1 {
           font-size: 2rem;
-          font-family: cursive;
+          font-family: sans-serif;
         }
 
         .information-about-your-guess p {
@@ -155,7 +155,7 @@
   <body>
     <header>
       <div class="header-container">
-        <button type="submit">Again!</button>
+        <button type="submit" class="again">Again!</button>
         <p>&lt;Between 1 and 20&gt;</p>
       </div>
       <div class="header-heading">
@@ -172,16 +172,22 @@
 
       <section class="guess-number-container">
         <div class="guess-number-box">
-          <input type="number" name="number" id="guessed-number" />
+          <input
+            type="number"
+            name="number"
+            id="guessed-number"
+            class="guess"
+          />
           <br />
-          <button type="submit">Check!</button>
+          <button type="submit" class="check">Check!</button>
         </div>
         <div class="information-about-your-guess">
-          <p>Start Guessing...</p>
-          <p>💯 Score: 20</p>
-          <p>🥇 Highscore: 0</p>
+          <p class="message">Start Guessing...</p>
+          <p class="">💯 Score: <span class="score">20</span></p>
+          <p>🥇 Highscore: <span class="highscore">0</span></p>
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
