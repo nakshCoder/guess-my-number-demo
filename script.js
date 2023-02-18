@@ -1,7 +1,7 @@
 /*
 "use strict";
 
-const secretNumber = Math.floor(Math.random() * 20 + 1);
+let secretNumber = Math.floor(Math.random() * 20 + 1);
 let score = 20;
 let highscore = 0;
 
@@ -39,7 +39,7 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 
 document.querySelector(".again").addEventListener("click", function () {
-  const guess = Math.floor(Math.random() * 20 + 1);
+  secretNumber = Math.floor(Math.random() * 20 + 1);
   score = 20;
   document.querySelector(".score").textContent = score;
   document.querySelector(".message").textContent = "Start Guessing...";
@@ -48,9 +48,10 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".guess").value = "";
 });
 */
+
 "use strict";
 
-const secretNumber = Math.floor(Math.random() * 20 + 1);
+let secretNumber = Math.floor(Math.random() * 20 + 1);
 let score = 20;
 let highscore = 0;
 
@@ -98,7 +99,7 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 
 document.querySelector(".again").addEventListener("click", function () {
-  const guess = Math.floor(Math.random() * 20 + 1);
+  secretNumber = Math.floor(Math.random() * 20 + 1);
   score = 20;
   PrintScore(score);
   PrintMessage("Start Guessing...");
